@@ -1,95 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home page</title>
+    <!-- daisy ul cdn  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- tailwind css cdn  -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>home page</title>
-  <!-- daisy ul cdn  -->
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-  <!-- tailwind css cdn  -->
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-  <!-- font awesome  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+  <body class="bg-[#f4f5f7] ">
+    <div class="max-w-lg mx-auto bg-white rounded-b-xl">
+      <!-- nav container  -->
+      <div
+        class="min-h-[50px] flex justify-between items-center border-b-1 border-gray-400 p-3"
+      >
+        <!-- left div container -->
+        <div class="flex items-center">
+          <img class="h-[50px]" src="assets/Group.png" alt="" />
+          <div class="ml-3">
+            <h1 class="font-bold">$ <span> 4500</span></h1>
+            <p class="text-[#08080880]">Avaiable Balance</p>
+          </div>
+        </div>
+        <!-- right div container -->
+        <div>
+          <button class="btn text-[#08080880]">
+            <i
+              class="fa-solid fa-arrow-right-from-bracket rotate-180 text-gray-700"
+            ></i
+            >Logout
+          </button>
+        </div>
+      </div>
 
-<body class="bg-[#f4f5f7] h-[100vh]">
-  <div class="max-w-lg mx-auto bg-white rounded-b-xl">
+      <!-- welcome text container  -->
 
-   <!-- nav container  -->
-  <div class="min-h-[50px] flex justify-between items-center  border-b-1 border-gray-400 p-3">
- <!-- left div container -->
-    <div class="flex items-center">
-      <img class="h-[50px]" src="assets/Group.png" alt="" />
-      <div class="ml-3">
-        <h1 class="font-bold">$ <span> 4500</span></h1>
-        <p class="text-[#08080880]">Avaiable Balance</p>
+      <div class="mt-8 p-3">
+        <h1 class="font-bold text-2xl">🔥Welcome to Payooo!</h1>
+        <p class="mt-2 text-[#08080880]">
+          Enjoy easy and convenient financial services with us. Cashout charge
+          is low and
+        </p>
+      </div>
+
+      <!-- grid container  -->
+
+      <div class="min-h-[200px] grid grid-cols-3 gap-4 p-3">
+        <!-- add money -->
+        <div class="text-center p-3 rounded-xl border-2 border-gray-300">
+          <img class="mx-auto" src="./assets/wallet1.png" alt="" />
+          <h2 class="text-[#08080880]">Add Money</h2>
+        </div>
+
+        <!-- cashOut -->
+        <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+          <img class="mx-auto" src="./assets/send1.png" alt="" />
+          <h2 class="text-[#08080880]">Cashout</h2>
+        </div>
+
+        <!-- Transfer money -->
+        <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+          <img class="mx-auto" src="./assets/money1.png" alt="" />
+          <h2 class="text-[#08080880]">Transfer Money</h2>
+        </div>
+
+        <!-- get bonus -->
+        <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+          <img class="mx-auto" src="./assets/bonus1.png" alt="" />
+          <h2 class="text-[#08080880]">Get Bonus</h2>
+        </div>
+        <!-- pay bill  -->
+        <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+          <img class="mx-auto" src="./assets/purse1.png" alt="" />
+          <h2 class="text-[#08080880]">Pay Bill</h2>
+        </div>
+
+        <!-- transactions  -->
+        <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+          <img class="mx-auto" src="./assets/transaction1.png" alt="" />
+          <h2 class="text-[#08080880]">Transacions</h2>
+        </div>
       </div>
     </div>
- <!-- right div container -->
-    <div>
-      <button class="btn text-[#08080880]">
-        <i class="fa-solid fa-arrow-right-from-bracket rotate-180 text-gray-700"></i>Logout
-      </button>
+
+    <!-- add money form  -->
+    <div class="all-form-sections max-w-lg mx-auto">
+      <div class="form">
+        <h1 class="my-5 font-bold">Add Money</h1>
+
+        <!-- start form part -->
+
+        <form action="" class="bg-white p-8 rounded-2xl">
+          <!-- Select a bank div -->
+          <div class="mb-3">
+            <label class="font-semibold" for="">Select a bank</label>
+            <br />
+            <select class="select bg-[#f4f5f7] mt-3 rounded-3xl w-full">
+              <option disabled selected>Select a bank</option>
+              <option>AB bank</option>
+              <option>IFIC bank</option>
+              <option>Dutch bangla bank</option>
+            </select>
+          </div>
+
+          <!-- Bank Account Number -->
+          <div class="mb-3">
+            <label class="font-semibold" for="">Bank Account Number</label>
+            <br />
+            <input
+              type="text"
+              id=""
+              placeholder="Enter 11 digit account number"
+              class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full"
+            />
+          </div>
+
+          <!-- Amount to Add div -->
+          <div class="mb-3">
+            <label class="font-semibold" for="">Amount to Add</label>
+            <br />
+            <input
+              type="text"
+              id=""
+              placeholder="Add Amount to withdraw"
+              class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full"
+            />
+          </div>
+
+          <!-- Pin Number Add div -->
+          <div class="">
+            <label class="font-semibold" for="">Pin Number</label>
+            <br />
+            <input
+              type="text"
+              id=""
+              placeholder="Enter 4 digit pin number"
+              class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full"
+            />
+          </div>
+
+          <!--button -->
+          <button
+            id=""
+            class="text-white btn bg-[#0874F2] mt-5 w-full rounded-3xl"
+          >
+            Add Money
+          </button>
+        </form>
+      </div>
     </div>
-  </div>
 
-  <!-- welcome text container  -->
-
-  <div class="mt-8 p-3">
-    <h1 class="font-bold text-2xl">🔥Welcome to Payooo!</h1>
-    <p class="mt-2 text-[#08080880]">Enjoy easy and convenient financial services with us. Cashout charge is low and
-    </p>
-  </div>
-
-
-  <!-- grid container  -->
-
-  <div class="min-h-[200px] grid grid-cols-3 gap-4 p-3">
-    <!-- add money -->
-    <div class="text-center p-3 rounded-xl border-2 border-gray-300">
-      <img class="mx-auto" src="./assets/wallet1.png" alt="">
-      <h2 class="text-[#08080880]">Add Money</h2>
-    </div>
-
-    <!-- cashOut -->
-    <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
-      <img class="mx-auto" src="./assets/send1.png" alt="">
-      <h2 class="text-[#08080880]">Cashout</h2>
-    </div>
-
-    <!-- Transfer money -->
-    <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
-      <img class="mx-auto" src="./assets/money1.png" alt="">
-      <h2 class="text-[#08080880]">Transfer Money </h2>
-    </div>
-
-    <!-- get bonus -->
-    <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
-      <img class="mx-auto" src="./assets/bonus1.png" alt="">
-      <h2 class="text-[#08080880]">Get Bonus</h2>
-    </div>
-    <!-- pay bill  -->
-    <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
-      <img class="mx-auto" src="./assets/purse1.png" alt="">
-      <h2 class="text-[#08080880]">Pay Bill</h2>
-    </div>
-    
-    <!-- transactions  -->
-    <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
-      <img class="mx-auto" src="./assets/transaction1.png" alt="">
-      <h2 class="text-[#08080880]">Transacions</h2>
-    </div>
-
-  </div>
-
-  </div>
-
- 
-
-</body>
-
+  </body>
 </html>
