@@ -1,16 +1,47 @@
 const validPin=1234
+
+// functon to get input value 
+function getInputValue(id){
+    const inputField = document.getElementById(id)
+    const inputFieldValue =inputField.value;
+    const inputFieldValueNumber = parseInt(inputFieldValue);
+  return inputFieldValueNumber;
+    
+    
+}
+
+
+function getInputValueString(id){
+    const inputField = document.getElementById(id)
+    const inputFieldValue =inputField.value;
+    return inputFieldValue;
+}
+
+
+// function inner text
+function getInnerText (id){
+    const element = document.getElementById(id);
+    const elementValue = element.innerText;
+    const elementValueNumber = parseInt(elementValue);
+    return elementValueNumber;
+}
+
+
+
 // add money feature
 document.getElementById('addmonery-button')
 .addEventListener('click',function(e){
     e.preventDefault();
-   const bank=document.getElementById('select-bank').value;
-   const accountNumber=document.getElementById('account-number').value;
 
-   const amount = parseInt(document.getElementById('amount-add').value);
-   const pinNumber = parseInt(document.getElementById('pin-number').value);
+   const bank=  getInputValueString('select-bank')
+
+   const accountNumber=getInputValue('account-number')
+
+   const amount = getInputValue('amount-add')
+   const pinNumber = getInputValue('pin-number') //parseInt(document.getElementById('pin-number').value);
    console.log(bank,accountNumber,amount,pinNumber);
    
-   const avaiableBalance= parseInt(document.getElementById('avaiable-balance').innerText);
+   const avaiableBalance= getInnerText('avaiable-balance')
 
    if(accountNumber.length<11){
     alert('Account number must be 11 digit');
@@ -30,10 +61,10 @@ document.getElementById('addmonery-button')
 document.getElementById('withdraw-button')
 .addEventListener('click',function(e){
     e.preventDefault();
-    const amount = parseInt(document.getElementById('amount-cashout').value);
-    console.log('dfkfhdf');
+    const amount = getInputValue('amount-cashout')// parseInt(document.getElementById('amount-cashout').value);
+    console.log(amount);
 
-    const avaiableBalance= parseInt(document.getElementById('avaiable-balance').innerText);
+    const avaiableBalance= getInnerText('avaiable-balance')
 
      const totalCurrentBalance=avaiableBalance-amount;
    document.getElementById('avaiable-balance').innerText=totalCurrentBalance;
