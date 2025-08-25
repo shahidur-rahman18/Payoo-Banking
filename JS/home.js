@@ -18,13 +18,48 @@ function getInputValueString(id){
 }
 
 
-// function inner text
+// function get innertext
 function getInnerText (id){
     const element = document.getElementById(id);
     const elementValue = element.innerText;
     const elementValueNumber = parseInt(elementValue);
     return elementValueNumber;
 }
+ 
+// fution set innertext
+
+function setInnerText (value){
+    const avaiableBalance= document.getElementById('avaiable-balance')
+     avaiableBalance.innerText=value
+
+
+}
+
+
+//  function toggle display
+
+function toggleDisplay(id){
+   const forms= document.getElementsByClassName('form')
+    for(const form of forms){
+     form.style.display='none';
+    }
+    document.getElementById(id).style.display='block';
+}
+
+
+
+//function to toggle buttons effect
+function toggleDisplayEffect(id){
+    const formBtns = document.getElementsByClassName('form-btn')
+    for( const btn of formBtns){
+        btn.classList.remove("border-[#0874f2]","bg-[#0874f20d]")
+        btn.classList.add("border-gray-300")
+       
+    }
+    document.getElementById(id).classList.remove("border-gray-300")
+    document.getElementById(id).classList.add("border-[#0874f2]","bg-[#0874f20d]")
+
+ }
 
 
 
@@ -38,7 +73,7 @@ document.getElementById('addmonery-button')
    const accountNumber=getInputValue('account-number')
 
    const amount = getInputValue('amount-add')
-   const pinNumber = getInputValue('pin-number') //parseInt(document.getElementById('pin-number').value);
+   const pinNumber = getInputValue('pin-number') 
    console.log(bank,accountNumber,amount,pinNumber);
    
    const avaiableBalance= getInnerText('avaiable-balance')
@@ -52,7 +87,7 @@ document.getElementById('addmonery-button')
     return;
    }
    const totalCurrentBalance=avaiableBalance+amount;
-   document.getElementById('avaiable-balance').innerText=totalCurrentBalance;
+   setInnerText(totalCurrentBalance);
 
 })
 
@@ -67,24 +102,37 @@ document.getElementById('withdraw-button')
     const avaiableBalance= getInnerText('avaiable-balance')
 
      const totalCurrentBalance=avaiableBalance-amount;
-   document.getElementById('avaiable-balance').innerText=totalCurrentBalance;
+    setInnerText(totalCurrentBalance);
 
 
 
 })
+
  
 // togggle feature
 document.getElementById('add-money-btn')
 .addEventListener('click',function(){
-    document.getElementById('cashout-parent').style.display='none';
-    document.getElementById('add-money-parent').style.display='block';
+    toggleDisplay('cashout-parent')
+   toggleDisplayEffect('add-money-btn')
 
 })
 
 document.getElementById('cashout-btn')
 .addEventListener('click',function(){
-    document.getElementById('add-money-parent').style.display='none';
-    document.getElementById('cashout-parent').style.display='block';
+ toggleDisplay('add-money-parent')
+   toggleDisplayEffect('cashout-btn')
+
+})
+document.getElementById('transfer-btn')
+.addEventListener('click',function(){
+ toggleDisplay('cashout-parent')
+   toggleDisplayEffect('transfer-btn')
+
+})
+document.getElementById('get-bonus-btn')
+.addEventListener('click',function(){
+ toggleDisplay('transfer-money-parent')
+   toggleDisplayEffect('get-bonus-btn')
 
 })
 
