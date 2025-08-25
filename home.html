@@ -23,7 +23,7 @@
     />
   </head>
 
-  <body class="bg-[#f4f5f7] ">
+  <body class="bg-[#f4f5f7]">
     <div class="max-w-lg mx-auto bg-white rounded-b-xl">
       <!-- nav container  -->
       <div
@@ -62,13 +62,19 @@
 
       <div class="min-h-[200px] grid grid-cols-3 gap-4 p-3">
         <!-- add money -->
-        <div id="add-money-btn" class="text-center p-3 rounded-xl border-2 border-gray-300">
+        <div
+          id="add-money-btn"
+          class="text-center p-3 rounded-xl border-2 border-gray-300"
+        >
           <img class="mx-auto" src="./assets/wallet1.png" alt="" />
           <h2 class="text-[#08080880]">Add Money</h2>
         </div>
 
         <!-- cashOut -->
-        <div id="cashout-btn" class="border-2 border-gray-300 text-center p-3 rounded-xl">
+        <div
+          id="cashout-btn"
+          class="border-2 border-gray-300 text-center p-3 rounded-xl"
+        >
           <img class="mx-auto" src="./assets/send1.png" alt="" />
           <h2 class="text-[#08080880]">Cashout</h2>
         </div>
@@ -108,10 +114,13 @@
 
         <form action="" class="bg-white p-8 rounded-2xl">
           <!-- Select a bank div -->
-          <div class="mb-3" >
+          <div class="mb-3">
             <label class="font-semibold" for="">Select a bank</label>
             <br />
-            <select id="select-bank" class="select bg-[#f4f5f7] mt-3 rounded-3xl w-full">
+            <select
+              id="select-bank"
+              class="select bg-[#f4f5f7] mt-3 rounded-3xl w-full"
+            >
               <option disabled selected>Select a bank</option>
               <option>AB bank</option>
               <option>IFIC bank</option>
@@ -121,7 +130,7 @@
 
           <!-- Bank Account Number -->
           <div class="mb-3">
-            <label  class="font-semibold" for="">Bank Account Number</label>
+            <label class="font-semibold" for="">Bank Account Number</label>
             <br />
             <input
               type="text"
@@ -164,18 +173,15 @@
           </button>
         </form>
       </div>
-  
 
-     <!-- cash out form -->
-      <div id="cashout-parent" class="form" >
-        <h1 class="my-5 font-bold"> Cash Out</h1>
+      <!-- cash out form -->
+      <div id="cashout-parent" class="form">
+        <h1 class="my-5 font-bold">Cash Out</h1>
 
-         <form action="" class="bg-white p-8 rounded-2xl">
-         
-
+        <form action="" class="bg-white p-8 rounded-2xl">
           <!-- Agent Number -->
           <div class="mb-3">
-            <label  class="font-semibold" for="">Agent Number</label>
+            <label class="font-semibold" for="">Agent Number</label>
             <br />
             <input
               type="text"
@@ -214,13 +220,12 @@
             id="withdraw-button"
             class="text-white btn bg-[#0874F2] mt-5 w-full rounded-3xl"
           >
-            withdraw Money
+            Withdraw Money
           </button>
         </form>
       </div>
-        </div>
+    </div>
 
     <script src="JS/home.js"></script>
-
   </body>
 </html>
