@@ -21,6 +21,25 @@ document.getElementById('addmonery-button')
    }
    const totalCurrentBalance=avaiableBalance+amount;
    document.getElementById('avaiable-balance').innerText=totalCurrentBalance;
-  
 
 })
+ 
+// togggle feature
+document.getElementById('add-money-btn')
+.addEventListener('click',function(){
+    document.getElementById('cashout-parent').style.display='none';
+    document.getElementById('add-money-parent').style.display='block';
+
+})
+
+document.getElementById('cashout-btn')
+.addEventListener('click',function(){
+    document.getElementById('add-money-parent').style.display='none';
+    document.getElementById('cashout-parent').style.display='block';
+
+})
+
+
+
+
+
